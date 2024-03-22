@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking - My Hobby</title>
+
+    <style>
+      html {
+        min-height: 100%;
+      }
+      body {
+        background-image: url("https://media.istockphoto.com/id/1135336159/vector/wooden-table-on-a-defocused-kitchen-interior-background.jpg?s=612x612&w=0&k=20&c=UxXZT8dpVScr-qjptTsgM7kXQRZzMlPgc4zRICu8Rrk=");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid;
+        background: white;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: lightblue;
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        color: white;
+        font-size: 18px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .theme-button {
+        font-size: 12px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+
+      .filipino-pork-adobo {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .filipino-pork-adobo:hover {
+        transform: scale(1.1);
+        filter: contrast(90%);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        margin: 5px 0;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+
+      .grid img:hover {
+        transform: scale(1.1);
+        filter: contrast(90%);
+        transition: all 150ms ease-in-out;
+      }
+
+      .dark {
+        background-image: url("https://img.freepik.com/premium-photo/food-table-top-view-free-space-your-text_187166-25767.jpg");
+        color: white;
+        background-size: cover;
+        height: fit-content;
+      }
+      .dark .container {
+        background: black;
+      }
+
+      .dark a {
+        color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>Cooking</h1>
+      <h2>My Favourite Hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Philippine_adobo" target="_blank"
+        ><img
+          src="https://salu-salo.com/wp-content/uploads/2015/04/Pork-Adobo-3.jpg"
+          alt="Filipino Pork Adobo"
+          class="filipino-pork-adobo"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://www.wandercooks.com/wp-content/uploads/2020/10/okonomiyaki-japanese-pancake-recipe-3.jpg"
+          alt="Japanese Okonomiyaki"
+        />
+        <img
+          src="https://tiffycooks.com/wp-content/uploads/2021/03/Korean-Fried-Chicken.png"
+          alt="Korean Fried Chicken"
+        />
+        <img
+          src="https://www.thespruceeats.com/thmb/9hzQqfv1z0flTRjaxIZpbXaplv8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chinese-pan-fried-dumplings-694499-hero-01-f51eb10e369d47bea2d8809300bbe83a.jpg"
+          alt="Chinese Dumplings"
+        />
+        <img
+          src="https://hot-thai-kitchen.com/wp-content/uploads/2022/05/green-curry-new-sq-2.jpg"
+          alt="Thai Green Curry"
+        />
+      </div>
+      <p>
+        Cooking, cookery, or culinary arts is the art, science and craft of
+        using heat to make food more palatable, digestible, nutritious, or safe.
+        Cooking techniques and ingredients vary widely, from grilling food over
+        an open fire to using electric stoves, to baking in various types of
+        ovens, reflecting local conditions. I enjoy cooking foods from different
+        cultures and tasting various cuisines from around the world.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Cooking"
+        ><strong>Read on Wikipedia</strong></a
+      >
+      <button class="learn">Learn to Cook</button>
+    </div>
+    <footer>Coded by Jo Templeton</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+
+        // if (body.classList.contains("dark")) {
+        //   body.classList.remove("dark");
+        // } else body.classList.add("dark");
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function learnToCook() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address");
+        alert(
+          `Hi Chef ${name}! We will be in touch! Thanks for registering your interest!`
+        );
+      }
+      let learnButton = document.querySelector(".learn");
+      learnButton.addEventListener("click", learnToCook);
+    </script>
+  </body>
+</html>
